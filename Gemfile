@@ -33,3 +33,6 @@ group :test do
 	# Capybara helps you test web applications by simulating how a real user would interact with your app.
 	gem "capybara", "~>2.4.3"
 end
+
+# bootstrap-sass is a Sass-powered version of Bootstrap, ready to drop right into your Sass powered applications.
+gem 'bootstrap-sass', '~> 3.3.4'

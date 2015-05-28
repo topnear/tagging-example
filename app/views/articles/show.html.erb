@@ -1,0 +1,14 @@
+<div class="row">
+	<%= alert_struct("success", flash[:success]) unless flash.empty? %>
+	<div class="col-xs-6 col-xs-offset-3">
+		<div class="show-article">
+				<h3><%= @article.title %></h3>
+				<p><%= @article.content %></p>
+				<div class="center">
+					<%= link_to "articles", articles_path %> | 
+					<%= link_to "edit", edit_article_path(@article) %> |
+					<%= link_to "destroy", article_path(@article), method: :delete %>
+				</div>
+		</div>
+	</div>
+</div>

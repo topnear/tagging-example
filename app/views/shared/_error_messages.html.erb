@@ -1,0 +1,3 @@
+<% unless @article.errors.nil? %>
+	<%= show_errors("danger", @article.errors.messages) %>
+<% end %>
