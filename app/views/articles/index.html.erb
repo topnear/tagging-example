@@ -1,11 +1,13 @@
 <div class="row">
 	<%= alert_struct("success", flash[:success]) unless flash.empty? %>
 	<div class="col-xs-6">
-		<h1>Articles</h1>	
+		<h1>Articles</h1>
+		<%= link_to "Create new article", new_article_path %>
 		<% @articles.each do |article| %>
 			<div class="article">
 				<h3><%= article.title %></h3>
 				<p><%= article.content %></p>
+				<p>tag: <%= list_tag(article) %></p>
 				<%= link_to "show", article_path(article) %> |
 				<%= link_to "edit", edit_article_path(article) %> |
 				<%= link_to "destroy", article_path(article), method: :delete %>

@@ -1,3 +1,4 @@
 class Article < ActiveRecord::Base
-	validates :title, :content, presence: true
+	acts_as_ordered_taggable
+	validates :title, :content, :tag_list, presence: true
 end

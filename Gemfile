@@ -36,3 +36,6 @@ end
 
 # bootstrap-sass is a Sass-powered version of Bootstrap, ready to drop right into your Sass powered applications.
 gem 'bootstrap-sass', '~> 3.3.4'
+
+# For tagging
+gem 'acts-as-taggable-on', '~> 3.4'
