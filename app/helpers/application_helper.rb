@@ -18,4 +18,15 @@ module ApplicationHelper
 			link_to "#{tag}", tag_path(tag: tag)
 		end.join(',').html_safe
 	end
+
+	def edit_tag(instance)
+		instance.tag_list.each do |tag|
+			concat content_tag(:li, tag)
+		end
+		nil
+	end
+
+	def have_a_tag?
+		!params[:tag].nil?
+	end
 end

@@ -8,8 +8,10 @@
 				<%= f.text_field :title, class: "form-control", placeholder: "Enter your title" %>
 			</div>
 			<div class="form-group">
-				<%= f.label :tag_list, "tag(separated by commas)" %>
-				<%= f.text_field :tag_list, class: "form-control", placeholder: "Enter your tags" %>
+				<%= f.label :tag_list, "tag" %>
+				<ul class="article-tags">
+					<%= edit_tag(@article) %>
+				</ul>
 			</div>
 			<div class="form-group">
 				<%= f.label :content %>
